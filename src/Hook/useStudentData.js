@@ -9,9 +9,9 @@ export function useStudentData() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://127.0.0.1:8000/api/students/`);
+        const res = await axios.get(`https://studentdatabackend-c1dr.onrender.com/api/students/`);
         setData(res.data);
-      } catch (err) {
+      } catch (err) { 
         console.error("Error fetching student data:", err);
         setError(err);
       } finally {
